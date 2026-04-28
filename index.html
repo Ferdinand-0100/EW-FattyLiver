@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fatty Liver</title>
+  <title>Fatty Liver — Edukasi Penyakit Perlemakan Hati</title>
+  <meta name="description" content="Panduan komprehensif tentang fatty liver (steatotic liver disease): definisi, genetik, patofisiologi, diagnosis, dan strategi penanganan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
   <!-- ===== NAV ===== -->
   <header>
     <nav class="nav">
-      <div class="nav__brand">
-        <div class="nav__brand-icon"></div>
-        Fatty Liver
-      </div>
+      <a href="#hero" class="nav__brand">
+        <span>Fatty Liver</span>
+      </a>
       <input type="checkbox" id="nav-toggle" class="nav__toggle-input" aria-label="Toggle navigation">
       <label for="nav-toggle" class="nav__hamburger" aria-hidden="true">
         <span></span><span></span><span></span>
@@ -34,120 +39,146 @@
 
     <!-- ===== HERO ===== -->
     <section id="hero">
-      <div class="hero__crosses" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
 
       <div class="hero__inner">
-        <!-- Left: text -->
         <div class="hero__content">
-          <div class="hero__tag">Edukasi Kesehatan</div>
-          <h1>Fatty Liver<em>(Steatotic Liver Disease)</em></h1>
-          <p>Pelajari tentang penyakit perlemakan hati — definisi, genetik, patofisiologi, diagnosis, dan strategi penanganannya secara komprehensif.</p>
+          <div class="hero__tag"><span class="hero__tag-dot"></span>Edukasi Kesehatan · Hepatologi</div>
+          <h1>
+            <span class="hero__title-line">Fatty Liver</span>
+            <em>Steatotic Liver Disease</em>
+          </h1>
+          <p class="hero__lead">Pelajari penyakit perlemakan hati secara komprehensif — mulai dari definisi modern, faktor genetik, patofisiologi, hingga strategi diagnosis dan penanganannya.</p>
           <div class="hero__actions">
-            <a href="#definisi" class="btn btn--primary">Mulai Membaca</a>
-            <a href="#spektrum" class="btn btn--ghost">Lihat Spektrum</a>
+            <a href="#definisi" class="btn btn--primary">
+              Mulai Membaca
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#spektrum" class="btn btn--ghost">Lihat Spektrum Penyakit</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num">3</span>
+              <span class="hero__stat-label">Kategori Utama</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">6</span>
+              <span class="hero__stat-label">Topik Bahasan</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">8</span>
+              <span class="hero__stat-label">Sumber Ilmiah</span>
+            </div>
           </div>
         </div>
 
-        <!-- Right: poster -->
         <div class="hero__poster-wrap">
-          <img
-            src="images/Poster.jpeg"
-            alt="Poster informatif tentang penyakit fatty liver (steatotic liver disease)"
-            class="hero__poster-img"
-          >
-        </div>
-      </div>
-
-      <!-- Stat strip -->
-      <div class="hero__stats">
-        <div class="hero__stats-inner">
-          <div class="hero__stat">
-            <span class="hero__stat-num">3</span>
-            <span class="hero__stat-label">Kategori Utama</span>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-num">6</span>
-            <span class="hero__stat-label">Topik Bahasan</span>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-num">8</span>
-            <span class="hero__stat-label">Sumber Ilmiah</span>
+          <div class="hero__poster-frame">
+            <img
+              src="images/Poster.jpeg"
+              alt="Poster informatif tentang penyakit fatty liver (steatotic liver disease)"
+              class="hero__poster-img"
+              onerror="this.style.display='none';this.parentElement.classList.add('hero__poster-frame--empty');"
+            >
+            <div class="hero__poster-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-2.5 2-4.5 2-6a5 5 0 0 0-10-1 5 5 0 0 0-10 1c0 1.5.5 3.5 2 6 2.5 4 7 7 8 7s5.5-3 8-7Z"/></svg>
+              <span>Poster Edukasi</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="hero__scroll" aria-hidden="true">
+      <a href="#definisi" class="hero__scroll" aria-label="Scroll ke bawah">
         <div class="hero__scroll-line"></div>
-        Scroll
-      </div>
+        <span>Scroll</span>
+      </a>
     </section>
 
     <!-- ===== DEFINISI ===== -->
     <section id="definisi" class="section">
       <div class="container">
-        <span class="section__eyebrow reveal">01 — Definisi</span>
-        <h2 class="section__title reveal reveal-delay-1">Apa itu Fatty Liver?</h2>
-        <div class="divider reveal reveal-delay-1"></div>
-        <p class="section__lead reveal reveal-delay-2">Fatty liver (steatotic liver disease) adalah istilah umum yang menggambarkan kondisi adanya penumpukan lemak di dalam sel hati. Steatosis hepatik didefinisikan sebagai kandungan lemak intrahepatik setidaknya <strong>5% dari berat hati</strong>.</p>
-        <p style="color:var(--gray-600);margin-bottom:2.5rem;" class="reveal reveal-delay-2">Saat ini, fatty liver tidak lagi dianggap sebagai satu penyakit tunggal, tetapi merupakan spektrum besar dengan berbagai penyebab dan tingkat keparahan. Secara modern, fatty liver dibagi menjadi beberapa kategori utama:</p>
+        <div class="section__header">
+          <span class="section__eyebrow reveal"><span class="section__eyebrow-num">01</span>Definisi</span>
+          <h2 class="section__title reveal reveal-delay-1">Apa itu <span class="text-accent">Fatty Liver?</span></h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p class="section__lead reveal reveal-delay-2">Fatty liver (steatotic liver disease) adalah istilah umum untuk kondisi penumpukan lemak di dalam sel hati. Steatosis hepatik didefinisikan sebagai kandungan lemak intrahepatik setidaknya <strong>5% dari berat hati</strong>.</p>
+          <p class="section__sub reveal reveal-delay-2">Saat ini, fatty liver tidak lagi dianggap sebagai satu penyakit tunggal, melainkan spektrum besar dengan berbagai penyebab dan tingkat keparahan. Secara modern, fatty liver dibagi menjadi beberapa kategori utama:</p>
+        </div>
 
         <div class="grid-3">
-          <div class="card card--imgbg card--red card--bg-alcohol reveal reveal-delay-1">
-            <div class="card__inner">
-              <h3 class="card__title">ALD</h3>
-              <p class="card__body">Alcohol-Related Liver Disease — istilah modern pengganti "alcoholic liver disease". Mencakup spektrum kerusakan hati akibat konsumsi alkohol, mulai dari perlemakan sederhana hingga sirosis.</p>
-            </div>
-          </div>
-          <div class="card card--imgbg card--amber card--bg-metabolic reveal reveal-delay-2">
-            <div class="card__inner">
-              <h3 class="card__title">MASLD</h3>
-              <p class="card__body">Metabolic Dysfunction-associated Steatotic Liver Disease — steatosis hati disertai minimal satu faktor risiko kardiometabolik: obesitas, DM tipe 2, hipertensi, dislipidemia, atau resistensi insulin.</p>
-            </div>
-          </div>
-          <div class="card card--imgbg card--red card--bg-inflam reveal reveal-delay-3">
-            <div class="card__inner">
-              <h3 class="card__title">MASH</h3>
-              <p class="card__body">Metabolic Dysfunction-Associated Steatohepatitis — bentuk lebih berat dari MASLD, disertai peradangan hati dan kerusakan hepatosit. Risiko tinggi berkembang menjadi fibrosis, sirosis, hingga karsinoma hepatoselular.</p>
-            </div>
-          </div>
+          <article class="card card--editorial card--bg reveal reveal-delay-1" style="--card-bg: url('images/Alcohol.png');">
+            <div class="card__num" style="color: rgb(140, 136, 136);">ALD</div>
+            <h3 class="card__title">ALD</h3>
+            <p class="card__subtitle">Alcohol-Related Liver Disease</p>
+            <p class="card__body">Istilah modern pengganti "alcoholic liver disease". Mencakup spektrum kerusakan hati akibat konsumsi alkohol, mulai dari perlemakan sederhana hingga sirosis.</p>
+            <div class="card__accent"></div>
+          </article>
+          <article class="card card--editorial card--bg card--bg-dark reveal reveal-delay-2" style="--card-bg: url('images/MASLD.png');">
+            <div class="card__num">MASLD</div>
+            <h3 class="card__title" style="color: rgb(169, 158, 158)">MASLD</h3>
+            <p class="card__subtitle">Metabolic Dysfunction-associated SLD</p>
+            <p class="card__body" style="color: rgb(140, 136, 136);">Steatosis hati disertai minimal satu faktor risiko kardiometabolik: obesitas, DM tipe 2, hipertensi, dislipidemia, atau resistensi insulin.</p>
+            <div class="card__accent"></div>
+          </article>
+          <article class="card card--editorial card--bg reveal reveal-delay-3" style="--card-bg: url('images/MASH.png');">
+            <div class="card__num" style="color: rgb(140, 136, 136);">MASH</div>
+            <h3 class="card__title">MASH</h3>
+            <p class="card__subtitle">Metabolic Dysfunction-Associated Steatohepatitis</p>
+            <p class="card__body">Bentuk lebih berat dari MASLD, disertai peradangan hati dan kerusakan hepatosit. Risiko tinggi berkembang menjadi fibrosis, sirosis, hingga karsinoma hepatoselular.</p>
+            <div class="card__accent"></div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ===== GENETIK ===== -->
     <section id="genetik" class="section section--alt">
+      <div class="section__bg-deco" aria-hidden="true"></div>
       <div class="container">
-        <span class="section__eyebrow reveal">02 — Genetik</span>
-        <h2 class="section__title reveal reveal-delay-1">Faktor Risiko Genetik</h2>
-        <div class="divider reveal reveal-delay-1"></div>
-        <p class="section__lead reveal reveal-delay-2">Polimorfisme gen tertentu dapat meningkatkan risiko seseorang mengalami fatty liver. Dua gen risk alleles yang telah diidentifikasi:</p>
+        <div class="section__header">
+          <span class="section__eyebrow reveal"><span class="section__eyebrow-num">02</span>Genetik</span>
+          <h2 class="section__title reveal reveal-delay-1">Faktor Risiko <span class="text-accent">Genetik</span></h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p class="section__lead reveal reveal-delay-2">Polimorfisme gen tertentu dapat meningkatkan risiko seseorang mengalami fatty liver. Dua gen risk alleles yang telah diidentifikasi:</p>
+        </div>
 
         <div class="grid-2">
-          <div class="card card--imgbg card--red card--bg-dna1 reveal reveal-delay-1">
-            <div class="card__inner">
-              <h3 class="card__title">PNPLA3 (I148M)</h3>
-              <p class="card__body">Varian ini menyebabkan perubahan fungsi protein yang berperan dalam metabolisme lemak di hati dan jaringan adiposa.</p>
-              <ul class="arrow-list">
-                <li>Meningkatkan penumpukan lemak di hepatosit</li>
-                <li>Mengganggu pemecahan dan pengolahan lemak</li>
-                <li>Mempercepat progresi menjadi peradangan hati (MASH)</li>
-              </ul>
+          <article class="card card--gene card--bg reveal reveal-delay-1" style="--card-bg: url('https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=600&q=70');">
+            <div class="card__gene-header">
+              <div>
+                <h3 class="card__title">PNPLA3</h3>
+                <p class="card__subtitle">Varian I148M</p>
+              </div>
             </div>
-          </div>
-          <div class="card card--imgbg card--amber card--bg-dna2 reveal reveal-delay-2">
-            <div class="card__inner">
-              <h3 class="card__title">TM6SF2 (E167K)</h3>
-              <p class="card__body">Varian ini memengaruhi proses sekresi lipid dari hati.</p>
-              <ul class="arrow-list">
-                <li>Mengganggu pembentukan dan pelepasan VLDL dari hati</li>
-                <li>Lemak tidak dapat dikeluarkan ke sirkulasi</li>
-                <li>Terjadi akumulasi trigliserida di hepatosit</li>
-                <li>Meningkatkan risiko inflamasi dan kerusakan hati (MASH)</li>
-              </ul>
+            <p class="card__body">Varian ini menyebabkan perubahan fungsi protein yang berperan dalam metabolisme lemak di hati dan jaringan adiposa.</p>
+            <ul class="arrow-list">
+              <li>Meningkatkan penumpukan lemak di hepatosit</li>
+              <li>Mengganggu pemecahan dan pengolahan lemak</li>
+              <li>Mempercepat progresi menjadi peradangan hati (MASH)</li>
+            </ul>
+          </article>
+          <article class="card card--gene card--bg card--bg-dark  reveal reveal-delay-2" style="--card-bg: url('https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=600&q=70');">
+            <div class="card__gene-header">
+              <div>
+                <h3 class="card__title" style="color: rgb(169, 158, 158)"">TM6SF2 </h3>
+                <p class="card__subtitle">Varian E167K</p>
+              </div>
             </div>
-          </div>
+            <p class="card__body" style="color: rgb(183, 178, 178);">Varian ini memengaruhi proses sekresi lipid dari hati.</p>
+            <ul class="arrow-list">
+              <li style="color: rgb(183, 178, 178);">Mengganggu pembentukan dan pelepasan VLDL dari hati</li>
+              <li style="color: rgb(183, 178, 178);">Lemak tidak dapat dikeluarkan ke sirkulasi</li>
+              <li style="color: rgb(183, 178, 178);">Terjadi akumulasi trigliserida di hepatosit</li>
+              <li style="color: rgb(183, 178, 178);">Meningkatkan risiko inflamasi dan kerusakan hati (MASH)</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -155,42 +186,75 @@
     <!-- ===== PATOFISIOLOGI ===== -->
     <section id="patofisiologi" class="section">
       <div class="container">
-        <span class="section__eyebrow reveal">03 — Patofisiologi</span>
-        <h2 class="section__title reveal reveal-delay-1">Mekanisme Penyakit</h2>
-        <div class="divider reveal reveal-delay-1"></div>
-        <p class="section__lead reveal reveal-delay-2">Fatty liver terjadi akibat ketidakseimbangan antara proses masuk, pembentukan, oksidasi, dan pengeluaran lemak di hati.</p>
-
-        <ol class="mechanism-list reveal reveal-delay-2">
-          <li>Peningkatan kadar asam lemak bebas (FFA) dari jaringan adiposa sebagai sumber utama akumulasi lemak di hati.</li>
-          <li>Peningkatan <i>de novo lipogenesis</i> — proses pembentukan asam lemak baru di hati.</li>
-          <li>Penurunan proses β-oksidasi mitokondria yang berfungsi membakar asam lemak sebagai energi.</li>
-          <li>Gangguan sekresi lipoprotein VLDL menyebabkan trigliserida tertahan di dalam hepatosit.</li>
-        </ol>
-
-        <div class="info-box reveal reveal-delay-3">
-          <strong>Resistensi Insulin:</strong> Kondisi ini diperburuk oleh resistensi insulin, yang meningkatkan aliran FFA ke hati serta memperkuat lipotoksisitas.
+        <div class="section__header">
+          <span class="section__eyebrow reveal"><span class="section__eyebrow-num">03</span>Patofisiologi</span>
+          <h2 class="section__title reveal reveal-delay-1">Mekanisme <span class="text-accent">Penyakit</span></h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p class="section__lead reveal reveal-delay-2">Fatty liver terjadi akibat ketidakseimbangan antara proses masuk, pembentukan, oksidasi, dan pengeluaran lemak di hati.</p>
         </div>
 
-        <p class="reveal reveal-delay-3">Akumulasi lemak yang berlebihan memicu gangguan fungsi sel hati melalui <strong>disfungsi mitokondria</strong>, <strong>stres retikulum endoplasma (ER stress)</strong>, dan peningkatan stres oksidatif.</p>
-        <p class="reveal reveal-delay-4">Kombinasi proses tersebut menyebabkan cedera hepatosit dan memicu respons inflamasi. Sel Kupffer (makrofag hati) teraktivasi dan melepaskan mediator inflamasi, yang kemudian mengaktivasi sel stelata hepatik — berperan penting dalam pembentukan <strong>fibrosis</strong> sebagai tahap awal menuju sirosis.</p>
+        <ol class="mechanism-list">
+          <li class="reveal reveal-delay-1">
+            <div class="mechanism-list__content">
+              <h4>Asam Lemak Bebas (FFA)</h4>
+              <p>Peningkatan kadar asam lemak bebas dari jaringan adiposa sebagai sumber utama akumulasi lemak di hati.</p>
+            </div>
+          </li>
+          <li class="reveal reveal-delay-2">
+            <div class="mechanism-list__content">
+              <h4>De Novo Lipogenesis</h4>
+              <p>Peningkatan pembentukan asam lemak baru di dalam hati melalui proses lipogenesis.</p>
+            </div>
+          </li>
+          <li class="reveal reveal-delay-3">
+            <div class="mechanism-list__content">
+              <h4>β-Oksidasi Mitokondria</h4>
+              <p>Penurunan proses β-oksidasi mitokondria yang berfungsi membakar asam lemak sebagai energi.</p>
+            </div>
+          </li>
+          <li class="reveal reveal-delay-4">
+            <div class="mechanism-list__content">
+              <h4>Sekresi VLDL</h4>
+              <p>Gangguan sekresi lipoprotein VLDL menyebabkan trigliserida tertahan di dalam hepatosit.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="info-box reveal reveal-delay-2">
+          <div class="info-box__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          </div>
+          <div>
+            <strong>Resistensi Insulin</strong>
+            <p>Kondisi ini diperburuk oleh resistensi insulin, yang meningkatkan aliran FFA ke hati serta memperkuat lipotoksisitas.</p>
+          </div>
+        </div>
+
+        <div class="prose reveal reveal-delay-3">
+          <p>Akumulasi lemak yang berlebihan memicu gangguan fungsi sel hati melalui <strong>disfungsi mitokondria</strong>, <strong>stres retikulum endoplasma (ER stress)</strong>, dan peningkatan stres oksidatif.</p>
+          <p>Kombinasi proses tersebut menyebabkan cedera hepatosit dan memicu respons inflamasi. Sel Kupffer (makrofag hati) teraktivasi dan melepaskan mediator inflamasi, yang kemudian mengaktivasi sel stelata hepatik — berperan penting dalam pembentukan <strong>fibrosis</strong> sebagai tahap awal menuju sirosis.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ===== SPEKTRUM TAHAPAN ===== -->
+    <!-- ===== SPEKTRUM ===== -->
     <section id="spektrum" class="section section--alt">
       <div class="container">
-        <span class="section__eyebrow reveal">04 — Spektrum Tahapan</span>
-        <h2 class="section__title reveal reveal-delay-1">Progresi Penyakit</h2>
-        <div class="divider reveal reveal-delay-1"></div>
-        <p class="section__lead reveal reveal-delay-2">Fatty liver merupakan spektrum penyakit yang dapat berkembang dari kondisi ringan hingga berat. Klik gambar untuk memperbesar.</p>
+        <div class="section__header">
+          <span class="section__eyebrow reveal"><span class="section__eyebrow-num">04</span>Spektrum Tahapan</span>
+          <h2 class="section__title reveal reveal-delay-1">Progresi <span class="text-accent">Penyakit</span></h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p class="section__lead reveal reveal-delay-2">Fatty liver merupakan spektrum penyakit yang dapat berkembang dari kondisi ringan hingga berat. Klik gambar untuk memperbesar.</p>
+        </div>
 
-        <figure class="reveal reveal-delay-2">
+        <figure class="figure-frame reveal reveal-delay-2">
           <img
             src="images/Liver_Problem_Progression.jpg"
             alt="Spektrum tahapan penyakit fatty liver: dari hati sehat → steatosis → steatohepatitis → fibrosis → sirosis → karsinoma hepatoselular"
             class="lightbox-trigger"
+            onerror="this.parentElement.classList.add('figure-frame--empty');"
           >
-          <figcaption>Gambar 1: Spektrum progresivitas penyakit fatty liver dari hati sehat hingga karsinoma hepatoselular.</figcaption>
+          <figcaption><span class="figure-frame__num">Gambar 1</span> Spektrum progresivitas penyakit fatty liver dari hati sehat hingga karsinoma hepatoselular.</figcaption>
         </figure>
       </div>
     </section>
@@ -198,56 +262,70 @@
     <!-- ===== DIAGNOSIS ===== -->
     <section id="diagnosis" class="section">
       <div class="container">
-        <span class="section__eyebrow reveal">05 — Diagnosis</span>
-        <h2 class="section__title reveal reveal-delay-1">Diagnosis Fatty Liver</h2>
-        <div class="divider reveal reveal-delay-1"></div>
-        <p class="section__lead reveal reveal-delay-2">Diagnosis dapat dilakukan melalui pendekatan noninvasif maupun invasif, tergantung indikasi klinis.</p>
+        <div class="section__header">
+          <span class="section__eyebrow reveal"><span class="section__eyebrow-num">05</span>Diagnosis</span>
+          <h2 class="section__title reveal reveal-delay-1">Diagnosis <span class="text-accent">Fatty Liver</span></h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p class="section__lead reveal reveal-delay-2">Diagnosis dapat dilakukan melalui pendekatan noninvasif maupun invasif, tergantung indikasi klinis.</p>
+        </div>
 
         <div class="diagnosis-grid">
-          <div class="diagnosis-card reveal reveal-delay-1">
+          <article class="diagnosis-card reveal reveal-delay-1">
             <div class="diagnosis-card__header diagnosis-card__header--green">
-              <div class="diagnosis-card__icon diagnosis-card__icon--green"> </div>
-              <h3>Noninvasif</h3>
+              <div class="diagnosis-card__icon diagnosis-card__icon--green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <span class="diagnosis-card__kicker">Pendekatan A</span>
+                <h3>Noninvasif</h3>
+              </div>
             </div>
             <div class="diagnosis-card__body">
-              <p><strong>Imaging:</strong></p>
-              <ul>
+              <h4 class="diagnosis-card__subhead">Imaging</h4>
+              <ul class="check-list">
                 <li>USG (Ultrasonografi)</li>
                 <li>CT Scan</li>
                 <li>MRI (Magnetic Resonance Imaging)</li>
                 <li>CAP (Controlled Attenuation Parameter) via FibroScan</li>
               </ul>
-              <p style="margin-top:1rem;"><strong>Serum Biomarker:</strong></p>
-              <ul>
+              <h4 class="diagnosis-card__subhead">Serum Biomarker</h4>
+              <ul class="check-list">
                 <li>FIB-4 score</li>
                 <li>NAFLD Fibrosis Score</li>
                 <li>AST to Platelet Ratio Index (APRI)</li>
               </ul>
-              <div class="info-box" style="margin-top:1rem;">Digunakan untuk menilai risiko fibrosis dan stratifikasi pasien.</div>
+              <div class="info-box info-box--inline">
+                <div>Digunakan untuk menilai risiko fibrosis dan stratifikasi pasien.</div>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="diagnosis-card reveal reveal-delay-2">
+          <article class="diagnosis-card reveal reveal-delay-2">
             <div class="diagnosis-card__header diagnosis-card__header--red">
-              <div class="diagnosis-card__icon diagnosis-card__icon--red"> </div>
-              <h3>Invasif</h3>
+              <div class="diagnosis-card__icon diagnosis-card__icon--red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24"/></svg>
+              </div>
+              <div>
+                <span class="diagnosis-card__kicker">Pendekatan B</span>
+                <h3>Invasif</h3>
+              </div>
             </div>
             <div class="diagnosis-card__body">
               <p>Biopsi hati adalah <strong>gold standard</strong> untuk diagnosis pasti, menilai:</p>
-              <ul>
+              <ul class="check-list">
                 <li>Derajat steatosis</li>
                 <li>Tingkat inflamasi</li>
                 <li>Fibrosis</li>
                 <li>Adanya steatohepatitis (MASH)</li>
               </ul>
-              <p style="margin-top:1rem;"><strong>Indikasi biopsi:</strong></p>
-              <ul>
+              <h4 class="diagnosis-card__subhead">Indikasi Biopsi</h4>
+              <ul class="check-list">
                 <li>Kecurigaan fibrosis lanjut / sirosis</li>
                 <li>Hasil non-invasif tidak jelas atau tidak konsisten</li>
                 <li>Konfirmasi diagnosis ketika penyebab lain belum dapat disingkirkan</li>
               </ul>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -255,78 +333,99 @@
     <!-- ===== PENANGANAN ===== -->
     <section id="penanganan" class="section section--alt">
       <div class="container">
-        <span class="section__eyebrow reveal">06 — Penanganan</span>
-        <h2 class="section__title reveal reveal-delay-1">Strategi Penanganan</h2>
-        <div class="divider reveal reveal-delay-1"></div>
-        <p class="section__lead reveal reveal-delay-2">Penanganan bertujuan mencegah progresivitas penyakit hati dan memperbaiki kondisi metabolik yang mendasari (adiposopathy).</p>
+        <div class="section__header">
+          <span class="section__eyebrow reveal"><span class="section__eyebrow-num">06</span>Penanganan</span>
+          <h2 class="section__title reveal reveal-delay-1">Strategi <span class="text-accent">Penanganan</span></h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p class="section__lead reveal reveal-delay-2">Penanganan bertujuan mencegah progresivitas penyakit hati dan memperbaiki kondisi metabolik yang mendasari (adiposopathy).</p>
+        </div>
 
-        <div class="info-box reveal reveal-delay-2" style="margin-bottom:2.5rem;">
-          Karena MASLD merupakan penyakit multisistem, penanganannya idealnya dilakukan secara <strong>multidisiplin</strong> — melibatkan ahli gizi, endokrinolog, hepatolog, kardiolog, psikiater, dan rehabilitasi medik.
+        <div class="info-box info-box--feature reveal reveal-delay-2">
+          <div class="info-box__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <strong>Pendekatan Multidisiplin</strong>
+            <p>Karena MASLD merupakan penyakit multisistem, penanganannya idealnya dilakukan secara <strong>multidisiplin</strong> — melibatkan ahli gizi, endokrinolog, hepatolog, kardiolog, psikiater, dan rehabilitasi medik.</p>
+          </div>
         </div>
 
         <div class="grid-2">
-          <div class="card card--imgbg card--red card--bg-diet reveal reveal-delay-1">
-            <div class="card__inner">
-              <h3 class="card__title">Modifikasi Gaya Hidup <span class="badge badge--red">Lini Pertama</span></h3>
-              <ul class="arrow-list" style="margin-top:.5rem;">
-                <li>Diet hipokalori (defisit 500–1000 kkal/hari)</li>
-                <li>Diet Mediterania — sayur, buah, kacang, ikan, minyak zaitun; batasi gula &amp; karbohidrat olahan</li>
-                <li>Intermittent fasting (pembatasan eating window)</li>
-              </ul>
+          <article class="card card--treatment card--bg reveal reveal-delay-1" style="--card-bg: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=70');">
+            <div class="card__treatment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4ZM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
             </div>
+            <h3 class="card__title">Modifikasi Gaya Hidup <span class="badge badge--red">Lini Pertama</span></h3>
+            <ul class="arrow-list">
+              <li>Diet hipokalori (defisit 500–1000 kkal/hari)</li>
+              <li>Diet Mediterania — sayur, buah, kacang, ikan, minyak zaitun; batasi gula &amp; karbohidrat olahan</li>
+              <li>Intermittent fasting (pembatasan eating window)</li>
+            </ul>
+          </article>
+          <article class="card card--treatment card--bg reveal reveal-delay-2 card--bg-dark" style="--card-bg: url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1200&q=70');">
+            <div class="card__treatment-icon card__treatment-icon--gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7ZM8.5 8.5l7 7"/></svg>
+            </div>
+            <h3 class="card__title" style="color: rgb(183, 178, 178);">Terapi Farmakologi</h3>
+            <p class="card__body" style="color: rgb(183, 178, 178);">Dipertimbangkan pada pasien dengan risiko progresi fibrosis, MASH, atau komorbid metabolik tidak terkontrol. Obat disesuaikan kondisi metabolik (diabetes, dislipidemia, obesitas).</p>
+          </article>
+          <article class="card card--treatment card--bg reveal reveal-delay-3 card--bg-dark" style="--card-bg: url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=1200&q=70');">
+            <div class="card__treatment-icon card__treatment-icon--slate">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg>
+            </div>
+            <h3 class="card__title" style="color: rgb(183, 178, 178);">Bariatrik</h3>
+            <p class="card__body" style="color: rgb(183, 178, 178);">Untuk pasien obesitas berat yang tidak respons terhadap perubahan gaya hidup dan terapi obat. Mencakup prosedur pembedahan dan endoskopi.</p>
+          </article>
+          <article class="card card--treatment card--bg reveal reveal-delay-4" style="--card-bg: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=70');">
+            <div class="card__treatment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="card__title">Aktivitas Fisik</h3>
+            <p class="card__body">Latihan aerobik dan anaerobik intensitas sedang (jalan cepat, bersepeda, jogging, latihan kekuatan). Dianjurkan ±45 menit/sesi, 3×/minggu.</p>
+          </article>
+        </div>
+
+        <div class="info-box info-box--accent reveal reveal-delay-3">
+          <div class="info-box__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
-          <div class="card card--imgbg card--amber card--bg-pharma reveal reveal-delay-2">
-            <div class="card__inner">
-              <h3 class="card__title">Terapi Farmakologi</h3>
-              <p class="card__body">Dipertimbangkan pada pasien dengan risiko progresi fibrosis, MASH, atau komorbid metabolik tidak terkontrol. Obat disesuaikan kondisi metabolik (diabetes, dislipidemia, obesitas).</p>
-            </div>
-          </div>
-          <div class="card card--imgbg card--slate card--bg-surgery reveal reveal-delay-3">
-            <div class="card__inner">
-              <h3 class="card__title">Bariatrik</h3>
-              <p class="card__body">Untuk pasien obesitas berat yang tidak respons terhadap perubahan gaya hidup dan terapi obat. Mencakup prosedur pembedahan dan endoskopi.</p>
-            </div>
-          </div>
-          <div class="card card--imgbg card--red card--bg-exercise reveal reveal-delay-4">
-            <div class="card__inner">
-              <h3 class="card__title">Aktivitas Fisik</h3>
-              <p class="card__body">Latihan aerobik dan anaerobik intensitas sedang (jalan cepat, bersepeda, jogging, latihan kekuatan). Dianjurkan ±45 menit/sesi, 3×/minggu.</p>
-            </div>
+          <div>
+            <strong>Tujuan akhir terapi</strong>
+            <p>Menghentikan/memperlambat progresi penyakit hati, mengurangi risiko fibrosis dan sirosis, serta mengontrol faktor risiko kardiometabolik secara menyeluruh.</p>
           </div>
         </div>
 
-        <div class="info-box reveal reveal-delay-3" style="margin-top:2.5rem;">
-          <strong>Tujuan akhir terapi:</strong> menghentikan/memperlambat progresi penyakit hati, mengurangi risiko fibrosis dan sirosis, serta mengontrol faktor risiko kardiometabolik secara menyeluruh.
-        </div>
-
-        <figure class="reveal reveal-delay-3" style="margin-top:3rem;">
+        <figure class="figure-frame reveal reveal-delay-3">
           <img
             src="images/Liver_Problem_Prevention.jpg"
             alt="Strategi pencegahan dan penanganan fatty liver melalui modifikasi gaya hidup"
             class="lightbox-trigger"
+            onerror="this.parentElement.classList.add('figure-frame--empty');"
           >
-          <figcaption>Gambar 2: Strategi pencegahan dan penanganan fatty liver.</figcaption>
+          <figcaption><span class="figure-frame__num">Gambar 2</span> Strategi pencegahan dan penanganan fatty liver.</figcaption>
         </figure>
       </div>
     </section>
 
     <!-- ===== SUMBER ===== -->
-    <section id="sumber" class="section">
+    <section id="sumber" class="section section--dark">
       <div class="container">
-        <span class="section__eyebrow reveal">Referensi</span>
-        <h2 class="section__title reveal reveal-delay-1">Sumber</h2>
-        <div class="divider reveal reveal-delay-1"></div>
-        <p class="section__lead reveal reveal-delay-2">Konten ini disusun berdasarkan literatur ilmiah yang telah dipublikasikan.</p>
+        <div class="section__header">
+          <span class="section__eyebrow section__eyebrow--dark reveal">Referensi</span>
+          <h2 class="section__title reveal reveal-delay-1">Sumber <span class="text-accent text-accent--bright">Ilmiah</span></h2>
+          <div class="divider divider--dark reveal reveal-delay-1"></div>
+          <p class="section__lead section__lead--dark reveal reveal-delay-2">Konten ini disusun berdasarkan literatur ilmiah yang telah dipublikasikan.</p>
+        </div>
 
-        <ol class="source-list reveal reveal-delay-2">
-          <li><span class="source-list__num">1</span><a href="https://pubmed.ncbi.nlm.nih.gov/27099587/" target="_blank" rel="noopener noreferrer"><b>Pathogenesis and Prevention of Hepatic Steatosis</b> - https://pubmed.ncbi.nlm.nih.gov/27099587/</a></li>
-          <li><span class="source-list__num">2</span><a href="https://www.nature.com/articles/s44355-025-00030-2" target="_blank" rel="noopener noreferrer"><b>Pathophysiology, Noninvasive Diagnostics and Emerging Personalized Treatments for Metabolic Associated Liver Diseases</b> - https://www.nature.com/articles/s44355-025-00030-2</a></li>
-          <li><span class="source-list__num">3</span><a href="https://medlineplus.gov/genetics/gene/pnpla3/" target="_blank" rel="noopener noreferrer"><b>PNPLA3 Gene</b> - https://medlineplus.gov/genetics/gene/pnpla3/</a></li>
-          <li><span class="source-list__num">4</span><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11348538/" target="_blank" rel="noopener noreferrer"><b>Current Status of Genetics and Polygenic Risk Scores in Metabolic Dysfunction-Associated Steatohepatitis</b> - https://pmc.ncbi.nlm.nih.gov/articles/PMC11348538/</a></li>
-          <li><span class="source-list__num">5</span><a href="https://pubmed.ncbi.nlm.nih.gov/38153279/" target="_blank" rel="noopener noreferrer"><b>Implications of the New Nomenclature of Steatotic Liver Disease and Definition of Metabolic Dysfunction-Associated Steatotic Liver Disease</b> - https://pubmed.ncbi.nlm.nih.gov/38153279/</a></li>
-          <li><span class="source-list__num">6</span><a href="https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2023.1294267/full" target="_blank" rel="noopener noreferrer"><b>Unmasking the Enigma of Lipid Metabolism in Metabolic Dysfunction-Associated Steatotic Liver Disease: From Mechanism to the Clinic</b> - https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2023.1294267/full</a></li>
-          <li><span class="source-list__num">7</span><a href="https://www.mdpi.com/2072-6643/12/11" target="_blank" rel="noopener noreferrer"><b>Nutrients, Volume 12, Issue 11</b> - https://www.mdpi.com/2072-6643/12/11</a></li>
-          <li><span class="source-list__num">8</span><a href="https://pubmed.ncbi.nlm.nih.gov/32039399/" target="_blank" rel="noopener noreferrer"><b>Lifestyle Modification in NAFLD/NASH: Facts and Figures</b> - https://pubmed.ncbi.nlm.nih.gov/32039399/</a></li>
+        <ol class="source-list">
+          <li><span class="source-list__num">1</span><a href="https://pubmed.ncbi.nlm.nih.gov/27099587/" target="_blank" rel="noopener noreferrer"><b>Pathogenesis and Prevention of Hepatic Steatosis</b><span class="source-list__url">pubmed.ncbi.nlm.nih.gov/27099587/</span></a></li>
+          <li><span class="source-list__num">2</span><a href="https://www.nature.com/articles/s44355-025-00030-2" target="_blank" rel="noopener noreferrer"><b>Pathophysiology, Noninvasive Diagnostics and Emerging Personalized Treatments for Metabolic Associated Liver Diseases</b><span class="source-list__url">nature.com/articles/s44355-025-00030-2</span></a></li>
+          <li><span class="source-list__num">3</span><a href="https://medlineplus.gov/genetics/gene/pnpla3/" target="_blank" rel="noopener noreferrer"><b>PNPLA3 Gene</b><span class="source-list__url">medlineplus.gov/genetics/gene/pnpla3/</span></a></li>
+          <li><span class="source-list__num">4</span><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11348538/" target="_blank" rel="noopener noreferrer"><b>Current Status of Genetics and Polygenic Risk Scores in Metabolic Dysfunction-Associated Steatohepatitis</b><span class="source-list__url">pmc.ncbi.nlm.nih.gov/articles/PMC11348538/</span></a></li>
+          <li><span class="source-list__num">5</span><a href="https://pubmed.ncbi.nlm.nih.gov/38153279/" target="_blank" rel="noopener noreferrer"><b>Implications of the New Nomenclature of Steatotic Liver Disease and Definition of MASLD</b><span class="source-list__url">pubmed.ncbi.nlm.nih.gov/38153279/</span></a></li>
+          <li><span class="source-list__num">6</span><a href="https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2023.1294267/full" target="_blank" rel="noopener noreferrer"><b>Unmasking the Enigma of Lipid Metabolism in MASLD: From Mechanism to the Clinic</b><span class="source-list__url">frontiersin.org/.../fmed.2023.1294267</span></a></li>
+          <li><span class="source-list__num">7</span><a href="https://www.mdpi.com/2072-6643/12/11" target="_blank" rel="noopener noreferrer"><b>Nutrients, Volume 12, Issue 11</b><span class="source-list__url">mdpi.com/2072-6643/12/11</span></a></li>
+          <li><span class="source-list__num">8</span><a href="https://pubmed.ncbi.nlm.nih.gov/32039399/" target="_blank" rel="noopener noreferrer"><b>Lifestyle Modification in NAFLD/NASH: Facts and Figures</b><span class="source-list__url">pubmed.ncbi.nlm.nih.gov/32039399/</span></a></li>
         </ol>
       </div>
     </section>
@@ -335,12 +434,17 @@
 
   <footer>
     <div class="footer__inner">
-      <div class="footer__brand">Fatty Liver</div>
+      <div class="footer__brand">
+        <span>Fatty Liver</span>
+      </div>
       <p class="footer__disclaimer">Konten ini hanya untuk tujuan informasi dan tidak merupakan saran medis. Konsultasikan kondisi Anda dengan tenaga kesehatan profesional.</p>
+      <p class="footer__copy">© 2026 · Edukasi Kesehatan Hepatologi</p>
     </div>
   </footer>
 
-  <button id="back-to-top" class="back-to-top hidden" aria-label="Kembali ke atas">↑</button>
+  <button id="back-to-top" class="back-to-top hidden" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Tampilan gambar penuh">
     <div class="lightbox__backdrop"></div>
